@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html lang="es">
+	<head>
+		<meta charset="UTF-8"/>
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link href="assets/img/logo.png" rel="icon">
+        <link rel="stylesheet" href="assets/librerias/bootstrap.min.css"> <!--* Libraries Bootstrap -->
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet" />
+		<link rel="stylesheet" href="assets/css/style.css" />
+		<title> Area Geometric Figures </title>
+	</head>
+
+	<body>
+
+		<header>
+			<nav class="mb-1 navbar navbar-expand-lg navbar-dark default-color">
+				<a class="navbar-brand" href="index.html"> Area Geometric Figures </a>
+				<img src="assets/img/img-nav.gif" height="50" class="d-inline-block align-top" alt="mdb logo">  
+				<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent-333" aria-controls="navbarSupportedContent-333" aria-expanded="false" aria-label="Toggle navigation"> <span class="navbar-toggler-icon"></span> </button>
+	
+				<div class="collapse navbar-collapse" id="navbarSupportedContent-333">
+					<ul class="navbar-nav ml-auto nav-flex-icons">
+						<li class="nav-item"> <a class="nav-link waves-effect waves-light" target="_blank" href="https://github.com/Alejandro-190107" style="color: white;"> <i class="fab fa-github-square"></i> </a> </li>
+						<li class="nav-item"> <a class="nav-link waves-effect waves-light" href="#" style="color: white;"> <i class="fab fa-linkedin"></i></a> </li>
+						<li class="nav-item"> <a class="nav-link waves-effect waves-light" target="_blank" href="#" style="color: white;"> <i class="fas fa-globe"></i></a> </li>
+	  				</ul>
+				</div>
+
+  			</nav>
+		</header>
+
+    <div class="container">
+		<div class="row">
+
+			<div class="col-sm-6">
+				<div class="card">
+					<div class="card-body">
+				  		<h5 class="card-title"> Área De Cuadrado. </h5>
+						<img src="assets/img/square.png" alt="" class="h4 mb-4">
+				  		<p class="card-text"> Un cuadrado en geometría es un cuadrilátero regular, es decir, una figura plana de cuatro lados congruentes.</p>
+				  		
+						<button type="button" class="btn" data-toggle="modal" data-target="#ModalSquare"> Calcular Área </button>
+						<!-- beggin-modal -->
+						<div class="modal fade" id="ModalSquare" tabindex="-1" role="dialog" aria-labelledby="ModalSquare" aria-hidden="true">
+							<div class="modal-dialog" role="document">
+								<div class="modal-content">
+									<div class="modal-header">
+										<h5 class="modal-title" id="ModalSquare"> Área De Cuadrado. </h5>
+										<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+										<span aria-hidden="true">&times;</span>
+										</button>
+									</div>
+									
+									<div class="modal-body">
+
+										<div class="row mb-4">
+
+											<div class="col">
+												<div class="form-outline">
+													<label class="form-label"> Lado </label>
+													<div class="input-group">
+												  		<input type="number" id="sideSquare" class="form-control" />
+												  		<div class="input-group-text"> cm </div>
+													</div>
+												</div>
+											</div>
+
+											<div class="col">
+												<div class="form-outline">
+													<label class="form-label"> . </label>
+													<div class="input-group">
+														<button type="submit" class="btn btn-dark btn-block mb-4" onclick="areaSquare()"> Calcular </button>
+													</div>
+												</div>
+											</div>
+
+										</div>
+
+										<div class="form-outline">
+											<div class="form-outline">
+												<div class="alert alert-success" role="alert">
+													<spam class="alert-link" id="resultSquare"> </spam>
+												</div>
+											</div>  
+										</div>
+
+									</div>
+									
+								</div>
+							</div>
+						</div>
+						<!-- end-modal -->
+					</div>
+				</div>
+			</div>
+
+			<div class="col-sm-6">
+				<div class="card">
+					<div class="card-body">
+				  		<h5 class="card-title">  Área De Rectángulo. </h5>
+						<img src="assets/img/rectangle.png" alt="" class="h4 mb-4">
+				  		<p class="card-text"> En geometría plana, un rectángulo es un paralelogramo cuyos cuatro lados forman ángulos rectos entre sí. </p>
+				  		
+						<button type="button" class="btn " data-toggle="modal" data-target="#ModalRectangle"> Calcular Área </button>
+						<!-- beggin-modal -->
+						<div class="modal fade" id="ModalRectangle" tabindex="-1" role="dialog" aria-labelledby="ModalRectangle" aria-hidden="true">
+							<div class="modal-dialog" role="document">
+								<div class="modal-content">
+									<div class="modal-header">
+										<h5 class="modal-title" id="ModalRectangle"> Área De Rectángulo. </h5>
+										<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+										<span aria-hidden="true">&times;</span>
+										</button>
+									</div>
+
+									<div class="modal-body">
+
+										<div class="row mb-4">
+
+											<div class="col">
+												<div class="form-outline">
+													<label class="form-label"> Base </label>
+													<div class="input-group">
+												  		<input type="number" id="baseRectangle" class="form-control" />
+												  		<div class="input-group-text"> cm </div>
+													</div>
+												</div>
+											</div>
+
+											<div class="col">
+												<div class="form-outline">
+													<label class="form-label"> Altura </label>
+													<div class="input-group">
+												  		<input type="number" id="alturaRectangle" class="form-control" />
+														<div class="input-group-text"> cm </div>
+													</div>
+												</div>
+											</div>
+
+										</div>
+
+										<div class="form-outline mb-4">
+											<button type="submit" class="btn btn-dark btn-block mb-4" onclick="areaRectangle()"> Calcular </button>
+										</div>
+
+										<div class="form-outline">
+											<div class="form-outline">
+												<div class="alert alert-success" role="alert">
+													<spam class="alert-link" id="resultRectangle"> </spam>
+												</div>
+											</div>  
+										</div>
+
+									</div>
+
+								</div>
+							</div>
+						</div>
+						<!-- end-modal -->
+					</div>
+				</div>
+			</div>
+
+			<div class="col-sm-6">
+				<div class="card">
+					<div class="card-body">
+				  		<h5 class="card-title"> Área De Triángulo. </h5>
+						<img src="assets/img/triangle.png" alt="" class="h4 mb-4">
+				  		<p class="card-text"> En geometría plana, se llama triángulo y los puntos comunes a cada par de lados se denominan vértices. </p>
+				  		
+						<button type="button" class="btn " data-toggle="modal" data-target="#ModalTriangle"> Calcular Área </button>
+						<!-- beggin-modal -->
+						<div class="modal fade" id="ModalTriangle" tabindex="-1" role="dialog" aria-labelledby="ModalTriangle" aria-hidden="true">
+							<div class="modal-dialog" role="document">
+								<div class="modal-content">
+									<div class="modal-header">
+										<h5 class="modal-title" id="ModalTriangle"> Área De Triángulo. </h5>
+										<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+										<span aria-hidden="true">&times;</span>
+										</button>
+									</div>
+
+									<div class="modal-body">
+
+										<div class="row mb-4">
+
+											<div class="col">
+												<div class="form-outline">
+													<label class="form-label"> Base </label>
+													<div class="input-group">
+												  		<input type="number" id="baseTriangle" class="form-control" />
+												  		<div class="input-group-text"> cm </div>
+													</div>
+												</div>
+											</div>
+
+											<div class="col">
+												<div class="form-outline">
+													<label class="form-label"> Altura </label>
+													<div class="input-group">
+												  		<input type="number" id="alturaTriangle" class="form-control" />
+														<div class="input-group-text"> cm </div>
+													</div>
+												</div>
+											</div>
+
+										</div>
+
+										<div class="form-outline mb-4">
+											<button type="submit" class="btn btn-dark btn-block mb-4" onclick="areaTriangle()"> Calcular </button>
+										</div>
+
+										<div class="form-outline">
+											<div class="form-outline">
+												<div class="alert alert-success" role="alert">
+													<spam class="alert-link" id="resultTriangle"> </spam>
+												</div>
+											</div>  
+										</div>
+
+									</div>
+
+								</div>
+							</div>
+						</div>
+						<!-- end-modal -->
+					</div>
+				</div>
+			</div>
+
+			<div class="col-sm-6">
+				<div class="card">
+					<div class="card-body">
+				  		<h5 class="card-title"> Área De Círculo. </h5>
+						<img src="assets/img/circle.png" alt="" class="h4 mb-4">
+				  		<p class="card-text"> Un círculo es una forma que consta de todos los puntos en un plano que están a una distancia dada de un punto dado, el centro. </p>
+				  		
+						<button type="button" class="btn " data-toggle="modal" data-target="#ModalCircle"> Calcular Área </button>
+						<!-- beggin-modal -->
+						<div class="modal fade" id="ModalCircle" tabindex="-1" role="dialog" aria-labelledby="ModalCircle" aria-hidden="true">
+							<div class="modal-dialog" role="document">
+								<div class="modal-content">
+									<div class="modal-header">
+										<h5 class="modal-title" id="ModalCircle"> Área De Círculo. </h5>
+										<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+										<span aria-hidden="true">&times;</span>
+										</button>
+									</div>
+
+									<div class="modal-body">
+
+										<div class="row mb-4">
+
+											<div class="col">
+												<div class="form-outline">
+													<label class="form-label"> Radio </label>
+													<div class="input-group">
+												  		<input type="number" id="radioCircle" class="form-control" />
+												  		<div class="input-group-text"> cm </div>
+													</div>
+												</div>
+											</div>
+
+											<div class="col">
+												<div class="form-outline">
+													<label class="form-label"> . </label>
+													<div class="input-group">
+														<button type="submit" class="btn btn-dark btn-block mb-4" onclick="areaCircle()"> Calcular </button>
+													</div>
+												</div>
+											</div>
+
+										</div>
+
+										<div class="form-outline">
+											<div class="form-outline">
+												<div class="alert alert-success" role="alert">
+													<spam class="alert-link" id="resultCircle"> </spam>
+												</div>
+											</div>  
+										</div>
+
+									</div>
+									
+								</div>
+							</div>
+						</div>
+						<!-- end-modal -->
+					</div>
+				</div>
+			</div>
+
+		</div>
+	</div>
+	<!-- container -->
+		
+		<footer class="page-footer font-small blue fixed-bottom">
+			<div class="footer-copyright text-center text-light py-3"> <b><i class="far fa-copyright"></i> 2023 Creado Por Alejandro López</b></div>
+		</footer>
+
+        <script defer src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
+		<script src="assets/librerias/jquery-3.6.0.min.js"></script> <!--! Libraries jquery -->
+        <script src="assets/librerias/popper.min.js"></script> <!--! Libraries Icons -->
+        <script src="assets/librerias/bootstrap.min.js"></script> <!--! Libraries Bootstrap -->
+        <script src="https://kit.fontawesome.com/a81368914c.js"></script> <!--! Libraries Font Of fontawesome -->
+        <script defer src="assets/js/main.js"></script>
+
+	</body>
+</html>
